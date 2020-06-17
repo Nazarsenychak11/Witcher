@@ -1,0 +1,240 @@
+
+.main {
+  background: url("/img/bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  z-index: 1;
+
+  .content {
+    padding: 0 3em 0 3em;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+
+    @media (max-width: 480px) {
+      padding: 0 1em 0 1em;
+    }
+
+    .witcher {
+      display: flex;
+      justify-content: center;
+
+      &__logo {
+        align-self: flex-end;
+        padding: 0 0 2em 2em;
+        img {
+          @media (max-width: 1399px) {
+            max-width: 85%;
+          }
+        }
+      }
+
+      &__big-img {
+        max-width: 74%;
+        align-self: flex-end;
+        
+        @media (max-width: 1399px) {
+          max-width: 85%;
+        }
+
+        @media (max-width: 1199px) {
+          max-width: 100%;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+
+    .info-bonus {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 100;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+
+      &__welcome {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-bottom: 2em;
+        text-align: center;
+      }
+
+      &__procent {
+        font-weight: bold;
+        font-size: 150px;
+
+        @media (max-width: 1399px) {
+          font-size: 140px;
+        }
+
+        @media (max-width: 1199px) {
+          font-size: 120px;
+        }
+
+        @media (max-width: 320px) {
+          font-size: 95px;
+        }
+
+      }
+
+      &__title {
+        font-size: 50px;
+        @media (max-width: 1399px) {
+          font-size: 46px;
+        }
+
+        @media (max-width: 1199px) {
+          font-size: 38px;
+        }
+
+        @media (max-width: 320px) {
+          font-size: 32px;
+        }
+      }
+
+      &__copy {
+        width: 90%;
+        margin: 0 auto 3em;
+        border: 1px #464646 dashed;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 60px;
+        font-family: Arial;
+      }
+
+      &__witcher-text {
+        color: red;
+        text-transform: uppercase;
+        font-size: 27px;
+        letter-spacing: 3px;
+        padding: 0 1.5em;
+
+        @media (max-width: 1199px) {
+          font-size: 22px;
+        }
+
+        @media (max-width: 320px) {
+          font-size: 20px;
+        }
+      }
+
+      &__copy-btn {
+        background: transparent;
+        border: 0;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        width: inherit;
+        justify-content: center;
+        border-left: 1px solid #464646;
+        outline: none;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        transition: .3s;
+
+        &:hover {
+          color: #F73427;
+          background: white;
+          font-weight: 600;
+          border-left: 2px solid #F73427;
+        }
+      }
+
+      &__playNow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F73427;
+        border-radius: 50px;
+        height: 60px;
+        width: 70%;
+        margin: 0 auto;
+        cursor: pointer;
+        border: 1px solid transparent;
+        outline: none;
+        transition: .3s;
+
+        &:hover {
+          background: white;
+          border: 1px solid #F73427;
+
+          .info-bonus__playNow-text {
+            color: #F73427;
+          }
+
+          box-shadow: 0 0 2px 2px #F73427;
+        }
+      }
+
+      &__playNow-text {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: Arial;
+        font-size: 16px;
+      }
+
+    }
+  }
+}
+
+//classes for hide and show blocks
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: flex !important;
+}
+
+//animated text
+.blink_text {
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+
+/* ---- particles-js ---- */
+#particles-js {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}

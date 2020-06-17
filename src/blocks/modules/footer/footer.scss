@@ -1,0 +1,38 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    height: 70px;
+  }
+
+  &__logo {
+    padding-left: 3em;
+    @media (max-width: 480px) {
+      padding-left: 1em;
+    }
+
+    img {
+      @media (max-width: 480px) {
+        width: 70%;
+      }
+    }
+  }
+
+  &__copyright {
+    color: #464646;
+    padding-right: 3em;
+    @media (max-width: 480px) {
+      padding-right: 1px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
